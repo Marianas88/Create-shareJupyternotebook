@@ -25,8 +25,8 @@ app = dash.Dash(__name__)
 #---------------------------------------------------------------------------------
 # Create the dropdown menu options
 dropdown_options = [
-    {'label': '...........', 'value': 'Yearly Statistics'},
-    {'label': 'Recession Period Statistics', 'value': '.........'}
+    {'label': 'Yearly Statistics', 'value': 'Yearly Statistics'},
+    {'label': 'Recession Period Statistics', 'value': 'Recession Period Statistics'}
 ]
 # List of years 
 year_list = [i for i in range(1980, 2024, 1)]
@@ -61,7 +61,7 @@ app.layout = html.Div([
     Output(component_id='Yearly Statistics', component_property='disabled'),
     Input(component_id='Yearly Statistics',component_property='disabled'))
 
-def update_input_container(.....):
+def update_input_container(selected_statistics, input_year):
     if ..... =='Yearly Statistics': 
         return False
     else: 
